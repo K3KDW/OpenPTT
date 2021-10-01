@@ -1,0 +1,9 @@
+OpenPTT is hardware for PTT operations, nothing more. That said, audio is a critical part of the packet radio system. PTT is of no use without audio.
+
+In a linux terminla, run the following:
+$ aplay -l //This is the sound card OUTPUT information you'll need to configure Direwolf
+$ arecord -r //This is the sound card INPUT information you'll need to configure Direwolf
+$ direwolf
+$ sudo alsamixer //Select the correct soundcard and adjust input volume as necessary until packet traffic in the Direwolf terminal averages around 50.
+Hit the ESC key
+$alsactl store //This stores the current settings. PLEASE NOTE: This setting is only accurate when the radio volume is unchanged.
