@@ -1,0 +1,21 @@
+There are multiple ways to accomplish our goal of triggering PTT on a radio. Below is just one method which uses what I had on hand but others may be added based on interest and other common parts.
+
+The parts required are an Arduino, trigger, and cables. Pick (1) of the following options for each as you like.
+
+ARDUINO - The brain making it all happen
+  Just about any Arduino should easily handle PTT. I've chosen to use an UNO because it handles the power and necessary serial communication with zero fuss. At the other end of the spectrum, an ATTINY85 could be used with additional components not covered here - CONTRIBUTORS WELCOME!
+
+TRIGGER - Isolates the Arduino from the radio and simplifies control
+  4N35 Optocoupler. Connect Arduino Digital Pin 3 to 4N35 pin 1. Connect Arduino ground to 4N25 pin 2. Connect 4N35 pin 5 to PTT+ on your cable (next step). Connect 4N35 pin 6 to PTT+.
+  
+  Transistors work well for triggers but are not documented here - CONTRIBUTORS WELCOME!
+  
+CABLES - Custom tailored to fit your specific radio.
+  Look online for the PTT+ and PTT- pins on your specific radio.
+  
+  Buy a cable for your radio. This is the nice and tidy option.
+  
+  Make your own - Sane, reasonable edition. This is just a matter or modifying compatible cables you have on hand to suit your need. For example 3.5mm audio jacks and RJ45 style connectors are often used for rig control.
+  
+  MaKe YoUr OwN - Hacker edition. WARNING - THIS MAY DAMAGE YOUR RADIO IF DONE INCORRECTLY! Don't short anything. Depending on the radio you want to connect, you may be able to purchase "spring pins" which fit the connectors on your radio well enough to work. This works on an Icom IC-718 and Kenwood TR-7400A :)
+    I've begun work on 3d printed plugs to negate the inherent risk of this method but it's not ready to release. STL files will be attached if/when ready. In the meantime I'm using heatshrink to insulate the spring pins and keep the wires attached.
