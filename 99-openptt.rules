@@ -1,0 +1,17 @@
+# LINUX UDEV Rules for OpenPTT. Credit to KK6OTK's "USB_PTT" for creating the original file
+# Plase this file in /etc/udev/rules.d/
+# FOLLOW THESE INSTRUCTIONS TO FILL OUT THE LOWER PORTION OF THE FILE. This will help Linux recognize your OpenPTT device and will rename it to XXXXXXX
+#   1) Unplug the OpenPTT Arduino
+#   2) Run the following command in a linux terminal: dmesg
+#   3) Plug in the OpenPTT Arduino
+#   4) Run the following command in a linux terminal: dmesg
+#   5) Find the USB device which was not present when you initially ran dmesg and take note of the following information as it appears in your terminal:
+#         idVendor
+#         idProduct
+#         serial
+#   6) Enter the noted information into the corresponding fields below. Replace the all text in CAPS which begins with "REPLACE THIS WITH..." but leave the quotes in place.
+
+
+SUBSYSTEM=="tty", ATTRS{idVendor}=="REPLACE THIS WITH IDVENDOR", ATTRS{idProduct}==" REPLACE THIS WITH IDPRODUCT", ATTRS{serial}=="REPLACE THIS WITH SERIAL",
+SYMLINK=="OpenPTT",
+GROUP="dialout
