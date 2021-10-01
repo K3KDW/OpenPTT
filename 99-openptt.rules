@@ -10,6 +10,8 @@
 #         idProduct
 #         serial
 #   6) Enter the noted information into the corresponding fields below. Replace the all text in CAPS which begins with "REPLACE THIS WITH..." but leave the quotes in place.
+#   7) Once the changes are complete, save and close the file.
+#   8) Run the following command in a linux terminal: cd /etc/init.d/ && ./udev restart
 
 
 SUBSYSTEM=="tty", ATTRS{idVendor}=="REPLACE THIS WITH IDVENDOR", ATTRS{idProduct}==" REPLACE THIS WITH IDPRODUCT", ATTRS{serial}=="REPLACE THIS WITH SERIAL",
